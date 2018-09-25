@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "node index.js",
-    "ui-test": "nightwatch",
-    "api-test": "mocha tests/api/*"
+    "ui-test": "./node_modules/.bin/nightwatch",
+    "api-test": "./node_modules/.bin/mocha tests/api/*"
   },
   "repository": {
     "type": "git",
