@@ -10,18 +10,23 @@ var router = express.Router();
 router.post('/login', function (req, res) {
     var name = req.param('name');
     var pwd = req.param('pwd');
-    res.json({name: name, 'pwd': pwd});
+    if (name === "john" && pwd === "111") {
+        res.json({'message': 'success'});
+    }
+    else
+        res.json({'message': 'wrong'});
 });
 
 router.get('/user/:uid', function (req, res) {
-    res.json({'uid':req.param('uid')});
+    res.json({'uid': req.param('uid')});
 });
 
-router.get('/index', function (req, res) {
-    res.json({message: 'api index'});
-});
 
 app.use('/api', router);
+
+app.use('/', function (req, res) {
+    res.json({message: 'api index'});
+});
 
 app.listen(3000);
 

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "node index.js",
+    "ui-test": "nightwatch",
+    "api-test": "mocha tests/api/*"
   },
   "repository": {
     "type": "git",
@@ -17,12 +19,13 @@
   },
   "homepage": "https://github.com/brightwang/automation-test#readme",
   "devDependencies": {
-    "express": "^4.16.3",
-    "nightwatch": "^0.9.21"
+    "express": "^4.16.3"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "nightwatch": "^0.9.21",
+    "supertest": "^3.3.0"
   }
 }
