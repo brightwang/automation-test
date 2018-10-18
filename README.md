@@ -19,5 +19,8 @@ https://sites.google.com/a/chromium.org/chromedriver/downloads
 > npm run server
 
 4.运行测试
+api测试
 > npm run api-test
+
+ui测试
 > npm run ui-test
